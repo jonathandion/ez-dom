@@ -18,6 +18,14 @@
     "test-local": "jest ./tests/**/*.test.js --watch",
     "test": "jest ./tests/**/*.test.js"
   },
+  "keywords": [
+    "javascript",
+    "dom",
+    "query",
+    "selector",
+    "html",
+    "jquery aternative"
+  ],
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
