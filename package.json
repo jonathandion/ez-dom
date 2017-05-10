@@ -1,0 +1,27 @@
+{
+  "name": "ez-dom",
+  "version": "1.0.0",
+  "description": "ez-dom is a minimalist library to manipulate the DOM, with a simple API",
+  "main": "./lib/index.js",
+  "author": "Jonathan Dion-Alary",
+  "repository": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "babel -d lib/ src/ --watch",
+    "build": "BABEL_ENV=production babel -d lib/ src/",
+    "test-local": "jest ./tests/**/*.test.js --watch",
+    "test": "jest ./tests/**/*.test.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-jest": "^20.0.0",
+    "babel-plugin-remove-comments": "^2.0.0",
+    "babel-plugin-transform-remove-console": "^6.8.1",
+    "babel-preset-babili": "0.0.12",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babili": "0.0.12",
+    "jest": "^20.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "presets": ["env"],
+  "env": {
+    "production": {
+      "presets": ["babili"],
+      "plugins": ["transform-remove-console", "remove-comments"]
+    },
+    "test": {
+    }
+  }
+}
