@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "ez-dom is a minimalist library to manipulate the DOM, with a simple API",
   "main": "./lib/index.js",
-  "author": "Jonathan Dion-Alary",
-  "repository": "",
+  "author": "Jonathan Dion <jonathandionalary@gmail.com> (jonathandion.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathandion/ez-dom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonathandion/ez-dom/issues"
+  },
   "license": "MIT",
   "scripts": {
     "dev": "babel -d lib/ src/ --watch",
