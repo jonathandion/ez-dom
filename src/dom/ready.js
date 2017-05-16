@@ -1,3 +1,3 @@
-const ready = callback => document.addEventListener('DOMContentLoaded', callback);
+const ready = callback => document.addEventListener('DOMContentLoaded', callback)
 
-export default ready;
+export default ready

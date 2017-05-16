@@ -1,4 +1,4 @@
-import { query } from '../../src/index'
+import { query } from '../../lib/index'
 
 test('should query one or more dom elements', () => {
     const html = document.querySelector('html')

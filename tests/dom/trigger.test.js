@@ -1,14 +1,14 @@
-import { trigger, query } from '../../src/index'
+import { trigger } from '../../src/index'
 
 test('it should trigger an event', () => {
     const html = document.querySelector('html')
-    let data = {};
+    let detail = {};
 
     html.addEventListener('click', e => {
-        data = e.detail;
+        detail = e.detail;
     })
-
-    trigger('click', { data : 'foo' })(html)
-    expect(data).toEqual({ data : 'foo' })
+    
+    trigger({ event : 'click', detail : { 'derp' : 'derp' } })(html)
+    expect(detail).toEqual( { 'derp' : 'derp' } )
 
 })

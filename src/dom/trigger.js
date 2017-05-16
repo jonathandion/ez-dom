@@ -1,10 +1,13 @@
+import curry from 'lodash/fp/curry'
 import query from './query'
 
-const trigger = (event,data) => selectors => {
-    query(selectors).map(selector =>
-        selector.dispatchEvent(new CustomEvent(event, { 'detail' : data })))
+const trigger = ({ event, detail }, selectors) => {
+    query(selectors).map(selector => {
+        selector.dispatchEvent(new CustomEvent(event, { detail: detail } ))
+    })
+    return selectors;
 }
 
-export default trigger;
+export default curry(trigger)
 
 

@@ -1,15 +1,14 @@
-import { chain, addClass, css , query, hide, text  } from '../../src/index'
+import { compose, addClass, css , query, hide, setText  } from '../../src/index'
 
 test('it should chain all functions and call them', () => {
     const html = document.querySelector('html')
 
-    chain(
-        query('html'),
+    compose(
         addClass('foo'),
         css({ backgroundColor: 'red' }),
-        hide(),
-        text('foo!')
-    )
+        hide,
+        setText('foo!')
+    )(query('html'))
 
     expect(html.classList.contains('foo')).toBe(true)
     expect(html.style.backgroundColor).toBe('red')

@@ -1,7 +1,7 @@
 {
   "name": "ez-dom",
   "version": "1.0.0",
-  "description": "ez-dom is a minimalist library to manipulate the DOM, with a simple API",
+  "description": "ez-dom is minimalist and functionnal library to manipulate the DOM, with a simple API",
   "main": "./lib/index.js",
   "author": "Jonathan Dion <jonathandionalary@gmail.com> (jonathandion.com)",
   "repository": {
@@ -16,10 +16,13 @@
     "dev": "babel -d lib/ src/ --watch",
     "build": "BABEL_ENV=production babel -d lib/ src/",
     "test-local": "jest ./tests/**/*.test.js --watch",
-    "test": "jest ./tests/**/*.test.js"
+    "test": "jest ./tests/**/*.test.js",
+    "publish": "npm version patch && npm publish"
   },
   "keywords": [
     "javascript",
+    "functional programming",
+    "fp",
     "dom",
     "query",
     "selector",
@@ -37,5 +40,8 @@
     "babel-preset-es2017": "^6.24.1",
     "babili": "0.0.12",
     "jest": "^20.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }

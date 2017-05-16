@@ -1,8 +1,8 @@
-import { offset } from '../../src/index'
+import { offset } from '../../lib/index'
 
 test('it should return', () => {
     const div = document.createElement('div')
-    const os = offset()(div)
+    const os = offset(div)
 
     expect(os).toEqual({
         bottom: 0,
