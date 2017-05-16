@@ -1,6 +1,6 @@
 {
   "name": "ez-dom",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "ez-dom is minimalist and functionnal library to manipulate the DOM, with a simple API",
   "main": "./lib/index.js",
   "author": "Jonathan Dion <jonathandionalary@gmail.com> (jonathandion.com)",
