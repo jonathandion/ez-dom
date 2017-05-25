@@ -98,7 +98,9 @@ ez.ready(() => {
 
 ### API
 
-#### query `(selectors: any) => Array<HTMLElement>`
+#### query 
+
+`(selectors: any) => Array<HTMLElement>`
 
 Query one or many element.
 
@@ -106,7 +108,9 @@ Query one or many element.
  const el = query('div')
 ```
 
-#### ready `(callback: Function) => void`
+#### ready 
+
+`(callback: Function) => void`
 
 Specify a function to execute when the DOM is fully loaded.
 
@@ -114,7 +118,9 @@ Specify a function to execute when the DOM is fully loaded.
  ez.ready(() => { console.log('ready!') })
 ```
 
-#### addClass `(classes: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### addClass 
+
+`(classes: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Adds the specified class(es) to each element in the set of matched elements.
 
@@ -122,14 +128,18 @@ Adds the specified class(es) to each element in the set of matched elements.
  addClass('myClass')(element)
 ```
 
-#### append  `(html: any, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### append  
+
+`(html: any, selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Insert content, specified by the parameter, to the end of each element in the set of matched elements.
 
 ```js 
  append(`<div>hi</div>`)(element)
 ```
-#### css `(css: object, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### css 
+
+`(css: object, selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Set one or more CSS properties for every matched element.
 
@@ -137,14 +147,18 @@ Set one or more CSS properties for every matched element.
  css({ backgroundColor: 'blue', fontSize: '20px' })(element)
 ```
 
-#### getText `(selectors: Array<HTMLElement>) => string`
+#### getText 
+
+`(selectors: Array<HTMLElement>) => string`
 
 Get the text of the first element
 
 ```js 
  getText(element)
 ```
-#### hide `(selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### hide 
+
+`(selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Hide the matched elements.
 
@@ -152,7 +166,9 @@ Hide the matched elements.
  hide(element)
 ```
 
-#### html `(selectors: Array<HTMLElement>) => string`
+#### html 
+
+`(selectors: Array<HTMLElement>) => string`
 
 Get the HTML contents of the first element.
 
@@ -160,7 +176,10 @@ Get the HTML contents of the first element.
  const html = html(element)
 ```
 
-#### offset `(selectors: Array<HTMLElement>) => Object`
+#### offset
+
+ `(selectors: Array<HTMLElement>) => Object`
+
 
 Get the current coordinates of the first element.
 
@@ -168,7 +187,9 @@ Get the current coordinates of the first element.
 const offset = offset(element)
 ```
 
-#### on `(event: string, callback: Function, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### on 
+
+`(event: string, callback: Function, selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Attach an event handler function for one or more events to the selected elements.
 
@@ -176,7 +197,9 @@ Attach an event handler function for one or more events to the selected elements
  on('click')(handleClick)(div)
 ```
 
-#### remove `(selectors: Function) => Array<HTMLElement>`
+#### remove 
+
+`(selectors: Function) => Array<HTMLElement>`
 
 Remove the set of matched elements from the DOM.
 
@@ -184,7 +207,9 @@ Remove the set of matched elements from the DOM.
  remove(element)
 ```
 
-#### removeClass `(classes: string selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### removeClass 
+
+`(classes: string selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Remove a single class, multiple classes, or all classes from each element in the set of matched elements
 
@@ -192,7 +217,9 @@ Remove a single class, multiple classes, or all classes from each element in the
  removeClass('foo derp')(element)
 ```
 
-#### setText `(text: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### setText 
+
+`(text: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Set the text contents of the matched elements.
 
@@ -200,7 +227,9 @@ Set the text contents of the matched elements.
  setText('foo')(div)
 ```
 
-#### show `(selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### show 
+
+`(selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Display the matched elements.
 
@@ -208,7 +237,9 @@ Display the matched elements.
  show(div)
 ```
 
-#### toggleClass `(classes: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+#### toggleClass 
+
+`(classes: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
 
 Add or remove one or more classes from each element in the set of matched elements.
 
@@ -217,7 +248,9 @@ Add or remove one or more classes from each element in the set of matched elemen
 ```
 
 
-#### trigger `({event, detail}: { event: string; detail: Object; }, selectors: Array<HTMLElement> ) => Array<HTMLElement>`
+#### trigger 
+
+`({event, detail}: { event: string; detail: Object; }, selectors: Array<HTMLElement> ) => Array<HTMLElement>`
 
 Execute all handlers and behaviors attached to the matched elements for the given event type.
 
