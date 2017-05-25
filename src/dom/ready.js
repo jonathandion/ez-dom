@@ -1,3 +1,7 @@
-const ready = callback => document.addEventListener('DOMContentLoaded', callback)
+/* @flow */
 
-export default ready
+function ready(callback: Function): void {
+  document.addEventListener('DOMContentLoaded', callback);
+}
+
+export default ready;

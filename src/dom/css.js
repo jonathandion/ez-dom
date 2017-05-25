@@ -1,9 +1,12 @@
-import curry from 'lodash/fp/curry'
-import query from './query'
+/* @flow */
 
-const css = (style, selectors) => {
-    query(selectors).map(selector => Object.assign(selector.style, style))
-    return selectors;
+import curry from 'lodash/fp/curry';
+
+function css(style: Object, selectors: Array<HTMLElement>): Array<HTMLElement> {
+  return selectors.map(selector => {
+    Object.assign(selector.style, style);
+    return selector;
+  });
 }
 
-export default curry(css)
+export default curry(css);

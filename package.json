@@ -17,7 +17,11 @@
     "build": "BABEL_ENV=production babel -d lib/ src/",
     "test-local": "jest ./tests/**/*.test.js --watch",
     "test": "jest ./tests/**/*.test.js",
-    "publish": "npm version patch && npm publish"
+    "publish-patch": "npm version patch && npm publish",
+    "flow-start": "flow start",
+    "flow-stop": "flow stop",
+    "flow-status": "flow status",
+    "flow-coverage": "flow coverage"
   },
   "keywords": [
     "javascript",
@@ -27,19 +31,28 @@
     "query",
     "selector",
     "html",
+    "zepto",
+    "jquery",
+    "element",
     "jquery aternative"
   ],
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.0",
     "babel-plugin-remove-comments": "^2.0.0",
     "babel-plugin-transform-remove-console": "^6.8.1",
     "babel-preset-babili": "0.0.12",
     "babel-preset-env": "^1.4.0",
     "babel-preset-es2017": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
     "babili": "0.0.12",
-    "jest": "^20.0.0"
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^20.0.0",
+    "prettier": "^1.3.1"
   },
   "dependencies": {
     "lodash": "^4.17.4"

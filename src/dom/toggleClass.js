@@ -1,9 +1,15 @@
-import curry from 'lodash/fp/curry'
-import query from './query';
+/* @flow */
 
-const toggleClass = (_class, selectors) => {
-    query(selectors).map(selector => selector.classList.toggle(_class))
-    return selectors;
+import curry from 'lodash/fp/curry';
+
+function toggleClass(
+  classes: string,
+  selectors: Array<HTMLElement>
+): Array<HTMLElement> {
+  return selectors.map(selector => {
+    selector.classList.toggle(classes);
+    return selector;
+  });
 }
 
-export default curry(toggleClass)
+export default curry(toggleClass);

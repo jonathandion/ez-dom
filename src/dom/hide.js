@@ -1,9 +1,10 @@
-import query from './query'
-// import curry from 'lodash/fp/curry'
+/* @flow */
 
-const hide = selectors => {
-    query(selectors).map(selector => selector.style.display = 'none')
-    return selectors;
+function hide(selectors: Array<HTMLElement>): Array<HTMLElement> {
+  return selectors.map(selector => {
+    selector.style.display = 'none';
+    return selector;
+  });
 }
 
-export default hide
+export default hide;

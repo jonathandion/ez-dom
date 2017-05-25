@@ -1,13 +1,19 @@
-import curry from 'lodash/fp/curry'
-import query from './query'
+/* @flow */
 
-const on = (event, callback, selectors) => {
-    query(selectors).map(selector => {
-        selector.addEventListener(event, (e) => {
-            callback(e, selector)
-        })
-    })
-    return selectors;
+import curry from 'lodash/fp/curry';
+import query from './query';
+
+function on(
+  event: string,
+  callback: Function,
+  selectors: Array<HTMLElement>
+): Array<HTMLElement> {
+  return selectors.map(selector => {
+    selector.addEventListener(event, function(e) {
+      callback.call(null, e, query(selector));
+    });
+    return selector;
+  });
 }
 
 export default curry(on);

@@ -1,6 +1,9 @@
-import query from './query'
+/* @flow */
 
-const offset = selectors =>
-    query(selectors).map(selector => selector.getBoundingClientRect())[0]
+function offset(selectors: Array<HTMLElement>): Object {
+  return selectors.map(selector => {
+    return selector.getBoundingClientRect();
+  })[0];
+}
 
-export default offset
+export default offset;

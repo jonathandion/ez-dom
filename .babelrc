@@ -1,11 +1,19 @@
 {
-  "presets": ["env"],
+  "presets": [
+    "env",
+    "flow"
+  ],
+  "retainLines": true,
   "env": {
     "production": {
-      "presets": ["babili"],
-      "plugins": ["transform-remove-console", "remove-comments"]
+      "presets": [
+        "babili"
+      ],
+      "plugins": [
+        "transform-remove-console",
+        "remove-comments"
+      ]
     },
-    "test": {
-    }
+    "test": {}
   }
 }

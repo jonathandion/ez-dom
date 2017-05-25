@@ -1,3 +1,4 @@
-const chain = (...args) => el => args.map(a => a(el))
+const chain = (...args: Array<Function>) => (el: Array<HTMLElement>) =>
+  args.map(a => a(el));
 
-export default chain
+export default chain;

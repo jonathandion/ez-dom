@@ -54,7 +54,9 @@ or destructuring
 import { addClass }  from 'ez-dom'
 ```
 
-you can also do
+To reduce size all you need is to use bundler with tree shaking support like webpack 2 or Rollup.
+
+You can do imports like below without actually including the entire library content.
 
 ```js
 import ready from 'ez-dom/lib/dom/ready'
@@ -96,81 +98,129 @@ ez.ready(() => {
 
 ### API
 
-#### addClass `(classes: string, selectors: array) => array`
-```js
- addClass('myClass')(element)
-```
+#### query `(selectors: any) => Array<HTMLElement>`
 
-#### append  `(html: any, selectors: array) => array`
-```js 
- append(`<div>hi</div>`)(element)
-```
-#### css `(css: object, selectors: array) => array`
-```js 
- css({ backgroundColor: 'blue', fontSize: '20px' })(element)
-```
+Query one or many element.
 
-#### getText `(selectors: array) => string`
-```js 
- getText(element)
-```
-#### hide `(selectors: array) => array`
-```js 
- hide(element)
-```
-
-#### html `(selectors: array) => string`
-```js 
- const html = html(element)
-```
-
-#### offset
-```js 
-const offset = offset(element)
-```
-
-#### on `(event: object, callback: function, selectors: array) => object`
-```js 
- on('click')(handleClick)(div)
-```
-
-#### query `(selectors: array) => array`
 ```js 
  const el = query('div')
 ```
 
-#### ready `(callback: function) => undefined`
+#### ready `(callback: Function) => void`
+
+Specify a function to execute when the DOM is fully loaded.
+
 ```js 
  ez.ready(() => { console.log('ready!') })
 ```
 
-#### remove `(selectors: array) => array`
+#### addClass `(classes: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Adds the specified class(es) to each element in the set of matched elements.
+
+```js
+ addClass('myClass')(element)
+```
+
+#### append  `(html: any, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Insert content, specified by the parameter, to the end of each element in the set of matched elements.
+
+```js 
+ append(`<div>hi</div>`)(element)
+```
+#### css `(css: object, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Set one or more CSS properties for every matched element.
+
+```js 
+ css({ backgroundColor: 'blue', fontSize: '20px' })(element)
+```
+
+#### getText `(selectors: Array<HTMLElement>) => string`
+
+Get the text of the first element
+
+```js 
+ getText(element)
+```
+#### hide `(selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Hide the matched elements.
+
+```js 
+ hide(element)
+```
+
+#### html `(selectors: Array<HTMLElement>) => string`
+
+Get the HTML contents of the first element.
+
+```js 
+ const html = html(element)
+```
+
+#### offset `(selectors: Array<HTMLElement>) => Object`
+
+Get the current coordinates of the first element.
+
+```js 
+const offset = offset(element)
+```
+
+#### on `(event: string, callback: Function, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Attach an event handler function for one or more events to the selected elements.
+
+```js 
+ on('click')(handleClick)(div)
+```
+
+#### remove `(selectors: Function) => Array<HTMLElement>`
+
+Remove the set of matched elements from the DOM.
+
 ```js 
  remove(element)
 ```
 
-#### removeClass `(classes: string selectors: array) => array`
+#### removeClass `(classes: string selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Remove a single class, multiple classes, or all classes from each element in the set of matched elements
+
 ```js 
  removeClass('foo derp')(element)
 ```
 
-#### setText `(text: string, selectors: array) => array`
+#### setText `(text: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Set the text contents of the matched elements.
+
 ```js 
  setText('foo')(div)
 ```
 
-#### show `(selectors: array) => array`
+#### show `(selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Display the matched elements.
+
 ```js 
  show(div)
 ```
 
-#### toggleClass `(classes: string, selectors: array) => array`
+#### toggleClass `(classes: string, selectors: Array<HTMLElement>) => Array<HTMLElement>`
+
+Add or remove one or more classes from each element in the set of matched elements.
+
 ```js 
  toggleClass('myToggleClass')(div)
 ```
 
 
-#### trigger `({event, detail}: { event: string; detail: object; }, selectors: array) => any`
+#### trigger `({event, detail}: { event: string; detail: Object; }, selectors: Array<HTMLElement> ) => Array<HTMLElement>`
+
+Execute all handlers and behaviors attached to the matched elements for the given event type.
+
 ```js 
  trigger({ event : 'click', detail : { 'test' : 'hi' } })(element)
 ```

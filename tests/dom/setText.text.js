@@ -1,7 +1,7 @@
-import { setText } from '../../src/index'
+import {setText, query} from '../../src/index';
 
 test('get and set text from an element', () => {
-    const div = document.createElement('div')
-    setText('foo')(div)
-    expect(div.textContent).toEqual('foo')
-})
+  const div = document.createElement('div');
+  setText('foo')(query(div));
+  expect(div.textContent).toEqual('foo');
+});

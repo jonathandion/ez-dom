@@ -1,9 +1,12 @@
-import query from './query';
-import curry from 'lodash/fp/curry'
+/* @flow */
 
-const show = selectors => {
-    query(selectors).map(selector => selector.style.display = '')
-    return selectors;
+import curry from 'lodash/fp/curry';
+
+function show(selectors: Array<HTMLElement>): Array<HTMLElement> {
+  return selectors.map(selector => {
+    selector.style.display = '';
+    return selector;
+  });
 }
 
-export default curry(show)
+export default curry(show);

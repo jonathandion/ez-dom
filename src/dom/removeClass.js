@@ -1,10 +1,16 @@
-import curry from 'lodash/fp/curry'
-import query from './query'
+/* @flow */
 
-const removeClass = (classes, selectors) => {
-    const _classes = classes.split(' ')
-    query(selectors).map(selector => selector.classList.remove(..._classes))
-    return selectors;
+import curry from 'lodash/fp/curry';
+
+function removeClass(
+  classes: string,
+  selectors: Array<HTMLElement>
+): Array<HTMLElement> {
+  const formatedClasses = classes.split(' ');
+  return selectors.map(selector => {
+    selector.classList.remove(...formatedClasses);
+    return selector;
+  });
 }
 
-export default curry(removeClass)
+export default curry(removeClass);

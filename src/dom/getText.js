@@ -1,6 +1,9 @@
-import query from './query'
+/* @flow */
 
-const getText = selectors =>
-    query(selectors).map(selector =>  selector.textContent).toString()
+function getText(selectors: Array<HTMLElement>): string {
+  return selectors.map(selector => {
+    return selector.textContent.toString();
+  })[0];
+}
 
-export default getText
+export default getText;
