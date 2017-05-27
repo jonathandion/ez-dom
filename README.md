@@ -1,6 +1,8 @@
 
 ![Travis CI](https://travis-ci.org/jonathandion/ez-dom.svg?branch=master)
 
+[![NPM](https://nodei.co/npm/ez-dom.png?downloads=true)](https://www.npmjs.com/package/ez-dom)
+
 
 > ez-dom is a easy library to manipulate the DOM, with a simple API.
 
