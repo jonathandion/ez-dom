@@ -4,7 +4,7 @@
 [![NPM](https://nodei.co/npm/ez-dom.png?downloads=true)](https://www.npmjs.com/package/ez-dom)
 
 
-> ez-dom is a easy library to manipulate the DOM, with a simple API.
+> ez-dom is a library to manipulate the DOM using composition.
 
 ## Getting started
 ez-dom promotes a functional programming (FP) style to manipulate the DOM. Most methods are auto-curried and data-last(dom element(s)).
